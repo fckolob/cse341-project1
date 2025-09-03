@@ -1,0 +1,44 @@
+// LOCALHOST ### GET http://localhost:3000/contacts
+
+// LOCALHOST ### GET http://localhost:3000/contacts/68b8cfe738283a385cd5da7c Elay Rent contact.
+
+// Expected result: {
+  "_id": "68b8cfe738283a385cd5da7c",
+  "contact": {
+    "firstName": "Elay",
+    "lastName": "Rent",
+    "email": "elayrocks@test.com",
+    "favoriteColor": "Green",
+    "birthday": "12/12/20"
+  }
+}
+
+//LOCALHOST ### GET http://localhost:3000/contacts/68b8d01638283a385cd5da7e
+Jhon Carpenter contact.
+Expeted result: {
+  "_id": "68b8d01638283a385cd5da7e",
+  "contact2": {
+    "firstName": "Jhon",
+    "lastName": "Carpenter",
+    "email": "jCarpenter@test.com",
+    "favoriteColor": "Purple",
+    "birthday": "07/12/10"
+  }
+}
+
+LOCALHOST ### GET http://localhost:3000/contacts/68b8d04f38283a385cd5da80
+
+Carol Angster contact.
+Expected Result: {
+  "_id": "68b8d04f38283a385cd5da80",
+  "contact3": {
+    "firstName": "Carol",
+    "lastName": "Angster",
+    "email": "angsterredC@test.com",
+    "favoriteColor": "Yellow",
+    "birthday": "02/22/95"
+  }
+}
+
+
+

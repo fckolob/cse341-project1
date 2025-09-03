@@ -1,4 +1,4 @@
-const mongodb = require('../data/database');
+const mongodb = require('../routes/data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllContacts = async (req, res) => {
@@ -11,22 +11,23 @@ const getAllContacts = async (req, res) => {
     }
 };
 
-const getContactById = async (req, res) => {
+const getSingleContact = async (req, res, next) => {
+  const userId = new ObjectId(req.params.id);
+  try {
     const db = mongodb.getDb();
-    const contactId = req.params.id;
-    try {
-        const contact = await db.collection('contacts').findOne({ _id: ObjectId(contactId) });
-        if (contact) {
-            res.status(200).json(contact);
-        } else {
-            res.status(404).json({ error: 'Contact not found' });
-        }
-    } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch contact' });
+    const contact = await db.collection('contacts').findOne({ _id: userId });
+    res.setHeader('Content-Type', 'application/json');
+    if (contact) {
+      res.status(200).json(contact);
+    } else {
+      res.status(404).json({ error: 'Contact not found' });
     }
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch contact' });
+  }
 };
 
 module.exports = {
     getAllContacts,
-    getContactById
+    getSingleContact
 };
