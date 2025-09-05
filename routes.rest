@@ -40,5 +40,13 @@ Expected Result: {
   }
 }
 
+PRODUCTION DEPLOY ### GET https://cse341-project1-22ot.onrender.com
 
+PRODUCTION DEPLOY GET ALL CONTACTS ### GET https://cse341-project1-22ot.onrender.com/contacts
+
+PRODUCTION DELOY GET ELAY RENT CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8cfe738283a385cd5da7c
+
+PRODUCTION DEPLOY GET JHON CARPENTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
+
+PRODUCTION DELOY GET CAROL ANGSTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
 
