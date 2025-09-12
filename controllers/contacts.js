@@ -2,16 +2,16 @@ const mongodb = require('../routes/data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllContacts = async (req, res) => {
-    const db = mongodb.getDb();
-    try {
-        const contacts = await db.collection('contacts').find().toArray();
-        res.status(200).json(contacts);
-    } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch contacts' });
-    }
+  const db = mongodb.getDb();
+  try {
+    const contacts = await db.collection('contacts').find().toArray();
+    res.status(200).json(contacts);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch contacts' });
+  }
 };
 
-const getSingleContact = async (req, res, next) => {
+const getSingleContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   try {
     const db = mongodb.getDb();
@@ -28,6 +28,6 @@ const getSingleContact = async (req, res, next) => {
 };
 
 module.exports = {
-    getAllContacts,
-    getSingleContact
+  getAllContacts,
+  getSingleContact
 };
