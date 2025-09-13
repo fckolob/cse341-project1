@@ -12,10 +12,10 @@ const getAllContacts = async (req, res) => {
 };
 
 const getSingleContact = async (req, res) => {
-  const userId = new ObjectId(req.params.id);
+  const contactId = new ObjectId(req.params.id);
   try {
     const db = mongodb.getDb();
-    const contact = await db.collection('contacts').findOne({ _id: userId });
+    const contact = await db.collection('contacts').findOne({ _id: contactId });
     res.setHeader('Content-Type', 'application/json');
     if (contact) {
       res.status(200).json(contact);
@@ -27,7 +27,58 @@ const getSingleContact = async (req, res) => {
   }
 };
 
+const createContact = async (req, res) => {
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
+  };
+  const response = await mongodb.getDb().collection('contacts').insertOne(contact);
+
+  if (response.acknowledged) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error ocurred while creating the contact');
+  }
+};
+
+const updateContact = async (req, res) => {
+  const contactId = new ObjectId(req.params.id);
+  const contact = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
+  };
+  const response = await mongodb
+    .getDb()
+    .collection('contacts')
+    .replaceOne({ _id: contactId }, contact);
+
+  if (response.modifiedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error ocurred while updating the contact');
+  }
+};
+
+const deleteContact = async (req, res) => {
+  const contactId = new ObjectId(req.params.id);
+  const response = await mongodb.getDb().collection('contacts').deleteOne({ _id: contactId }, true);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error ocurred while deleting the contact');
+  }
+};
+
 module.exports = {
   getAllContacts,
-  getSingleContact
+  getSingleContact,
+  createContact,
+  updateContact,
+  deleteContact
 };
