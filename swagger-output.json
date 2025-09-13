@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "description": "Shows Hello World",
         "responses": {
           "200": {
             "description": "OK"
