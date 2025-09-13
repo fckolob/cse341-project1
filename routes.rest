@@ -47,28 +47,21 @@ PRODUCTION DEPLOY GET ALL CONTACTS ### GET https://cse341-project1-22ot.onrender
 
 PRODUCTION DELOY GET KAREN UNDERWOOD CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68c4c17475e47f14291299dc
 
-PRODUCTION DEPLOY GET JHON CARPENTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
-
-PRODUCTION DEPLOY GET CAROL ANGSTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
 
 PRODUCTION DEPLOY CREATE NEW CONTACT ### POST https://cse341-project1-22ot.onrender.com/contacts/
 
 PRODUCTION DEPLOY UPDATE kAREN UNDERWOOD CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68c4c17475e47f14291299dc
 
 
-PRODUCTION DEPLOY UPDATE JHON CARPENTER CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
+PRODUCTION DEPLOY UPDATE JULIE SANDERSON CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
 
 
-PRODUCTION DEPLOY UPDATE CAROL ANGSTER CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
+
 
 
 PRODUCTION DEPLOY DELETE kAREN UNDERWOOD CONTACT ### DELETE https://cse341-project1-22ot.onrender.com/contacts/68c4c17475e47f14291299dc
 
 
-PRODUCTION DEPLOY DELETE JHON CARPENTER CONTACT ### DELETE https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
-
-
-PRODUCTION DEPLOY DELETE CAROL ANGSTER CONTACT ### DELETE https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
 
 
 
