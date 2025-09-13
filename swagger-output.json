@@ -141,7 +141,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Deletes the specified contact from the database by Id.",
         "parameters": [
           {
             "name": "id",
