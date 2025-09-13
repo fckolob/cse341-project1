@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "The API can be used to create, update or return contacts. ",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
@@ -23,7 +23,7 @@
     },
     "/contacts/": {
       "get": {
-        "description": "",
+        "description": "The request returns all the contacts in the database",
         "responses": {
           "200": {
             "description": "OK"
@@ -34,7 +34,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "A new contact is created and added to the database if the proper information is send",
         "parameters": [
           {
             "name": "body",
@@ -43,19 +43,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Andrew"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Robinson"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "test@example"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "example": "Red"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "05/05"
                 }
               }
             }
@@ -73,7 +73,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
+        "description": "Returns a single contact by Id",
         "produces": [
           "application/json"
         ],
@@ -98,7 +98,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates the information of the specified contact.",
         "parameters": [
           {
             "name": "id",
@@ -113,19 +113,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Edward"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Stent"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "abcd@mail.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "example": "Blue"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "07/07"
                 }
               }
             }
@@ -141,7 +141,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Deletes the specified contact",
         "parameters": [
           {
             "name": "id",
