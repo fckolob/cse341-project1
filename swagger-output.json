@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "The API can be use to create, update and return contacts from the database",
     "version": "1.0.0"
   },
   "host": "cse341-project1-22ot.onrender.com",
@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "description": "Shows Hello World!",
         "responses": {
           "200": {
             "description": "OK"
@@ -23,7 +23,7 @@
     },
     "/contacts/": {
       "get": {
-        "description": "",
+        "description": "Returns all the contacts in the database.",
         "responses": {
           "200": {
             "description": "OK"
@@ -34,7 +34,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Creates a new contact.",
         "parameters": [
           {
             "name": "body",
@@ -43,19 +43,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Gerard"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Barrows"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "email@example.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "example": "Red"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "05/06"
                 }
               }
             }
@@ -73,7 +73,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
+        "description": "Returns the specified contact by Id",
         "produces": [
           "application/json"
         ],
@@ -98,7 +98,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates the specified contact by Id.",
         "parameters": [
           {
             "name": "id",
@@ -113,19 +113,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Julie"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Sanderson"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "abcd@mail.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "example": "Purple"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "09/03"
                 }
               }
             }
