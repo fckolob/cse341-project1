@@ -2,18 +2,18 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "The API can be used to create, update or return contacts. ",
+    "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project1-22ot.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
       "get": {
-        "description": "Shows Hello World",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -23,7 +23,7 @@
     },
     "/contacts/": {
       "get": {
-        "description": "The request returns all the contacts in the database",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -34,7 +34,7 @@
         }
       },
       "post": {
-        "description": "A new contact is created and added to the database if the proper information is send",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -43,19 +43,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "Andrew"
+                  "example": "any"
                 },
                 "lastName": {
-                  "example": "Robinson"
+                  "example": "any"
                 },
                 "email": {
-                  "example": "test@example"
+                  "example": "any"
                 },
                 "favoriteColor": {
-                  "example": "Red"
+                  "example": "any"
                 },
                 "birthday": {
-                  "example": "05/05"
+                  "example": "any"
                 }
               }
             }
@@ -73,7 +73,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "Returns a single contact by Id",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -98,7 +98,7 @@
         }
       },
       "put": {
-        "description": "Updates the information of the specified contact.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -113,19 +113,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "Edward"
+                  "example": "any"
                 },
                 "lastName": {
-                  "example": "Stent"
+                  "example": "any"
                 },
                 "email": {
-                  "example": "abcd@mail.com"
+                  "example": "any"
                 },
                 "favoriteColor": {
-                  "example": "Blue"
+                  "example": "any"
                 },
                 "birthday": {
-                  "example": "07/07"
+                  "example": "any"
                 }
               }
             }
@@ -141,7 +141,7 @@
         }
       },
       "delete": {
-        "description": "Deletes the specified contact",
+        "description": "",
         "parameters": [
           {
             "name": "id",

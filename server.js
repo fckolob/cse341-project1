@@ -6,7 +6,12 @@ const mongodb = require('./routes/data/database');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
 const bodyparser = require('body-parser');
-app.use(cors({ origin: 'https://cse341-project1-22ot.onrender.com' }));
+app.use(cors({
+  origin: [
+    'https://cse341-project1-22ot.onrender.com',
+    'http://localhost:3000'
+  ]
+}));
 app.use(bodyparser.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
