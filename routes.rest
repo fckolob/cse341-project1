@@ -1,52 +1,78 @@
 // LOCALHOST ### GET http://localhost:3000/contacts
 
-// LOCALHOST ### GET http://localhost:3000/contacts/68b8cfe738283a385cd5da7c Elay Rent contact.
+// LOCALHOST ### GET http://localhost:3000/contacts
+/68c4c17475e47f14291299dc Karen Underwood contact.
 
-// Expected result: {
-  "_id": "68b8cfe738283a385cd5da7c",
-  "contact": {
-    "firstName": "Elay",
-    "lastName": "Rent",
-    "email": "elayrocks@test.com",
-    "favoriteColor": "Green",
-    "birthday": "12/12/20"
+// Expected result:
+
+  {
+    "_id": "68c4c17475e47f14291299dc",
+    "firstName": "karen",
+    "lastName": "Underwood",
+    "email": "karen2@test.com",
+    "birthday": "02/22/98",
+    "favoriteColor": "red"
   }
-}
 
 //LOCALHOST ### GET http://localhost:3000/contacts/68b8d01638283a385cd5da7e
 Jhon Carpenter contact.
-Expeted result: {
-  "_id": "68b8d01638283a385cd5da7e",
-  "contact2": {
+Expeted result: 
+ {
+    "_id": "68b8d01638283a385cd5da7e",
     "firstName": "Jhon",
     "lastName": "Carpenter",
     "email": "jCarpenter@test.com",
-    "favoriteColor": "Purple",
-    "birthday": "07/12/10"
+    "birthday": "07/12/10",
+    "favoriteColor": "green"
   }
-}
 
 LOCALHOST ### GET http://localhost:3000/contacts/68b8d04f38283a385cd5da80
 
 Carol Angster contact.
-Expected Result: {
-  "_id": "68b8d04f38283a385cd5da80",
-  "contact3": {
+Expected Result:
+{
+    "_id": "68b8d04f38283a385cd5da80",
     "firstName": "Carol",
     "lastName": "Angster",
     "email": "angsterredC@test.com",
-    "favoriteColor": "Yellow",
-    "birthday": "02/22/95"
+    "birthday": "02/22/95",
+    "favoriteColor": "blue"
   }
-}
+
+
 
 PRODUCTION DEPLOY ### GET https://cse341-project1-22ot.onrender.com
 
 PRODUCTION DEPLOY GET ALL CONTACTS ### GET https://cse341-project1-22ot.onrender.com/contacts
 
-PRODUCTION DELOY GET ELAY RENT CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8cfe738283a385cd5da7c
+PRODUCTION DELOY GET KAREN UNDERWOOD CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68c4c17475e47f14291299dc
 
 PRODUCTION DEPLOY GET JHON CARPENTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
 
-PRODUCTION DELOY GET CAROL ANGSTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
+PRODUCTION DEPLOY GET CAROL ANGSTER CONTACT ### GET https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
+
+PRODUCTION DEPLOY CREATE NEW CONTACT ### POST https://cse341-project1-22ot.onrender.com/contacts/
+
+PRODUCTION DEPLOY UPDATE kAREN UNDERWOOD CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68c4c17475e47f14291299dc
+
+
+PRODUCTION DEPLOY UPDATE JHON CARPENTER CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
+
+
+PRODUCTION DEPLOY UPDATE CAROL ANGSTER CONTACT ### PUT https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
+
+
+PRODUCTION DEPLOY DELETE kAREN UNDERWOOD CONTACT ### DELETE https://cse341-project1-22ot.onrender.com/contacts/68c4c17475e47f14291299dc
+
+
+PRODUCTION DEPLOY DELETE JHON CARPENTER CONTACT ### DELETE https://cse341-project1-22ot.onrender.com/contacts/68b8d01638283a385cd5da7e
+
+
+PRODUCTION DEPLOY DELETE CAROL ANGSTER CONTACT ### DELETE https://cse341-project1-22ot.onrender.com/contacts/68b8d04f38283a385cd5da80
+
+
+
+
+
+
 
